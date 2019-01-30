@@ -1660,6 +1660,20 @@ details {
   text-transform: uppercase;
   margin-left: 15px;
 }
+.shiping_adress_text p {
+  color: #222222;
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-left: 15px;
+  height: auto;
+}
+.checkout_buttonJQ{
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 70px;
+  height: 30px;
+}
 .form-label {
   color: #222222;
   font-size: 12px;
@@ -1670,8 +1684,13 @@ details {
 .checkout_form_1 {
   display: flex;
   justify-content: space-between;
-  margin-top: 90px;
+  margin-top: 30px;
   margin-bottom: 79px;
+}
+.checkout_buttonHide{
+  margin-bottom: 0px;
+  height: 0px;
+  overflow: hidden;
 }
 .checkout_form_1_right {
   width: 500px;
@@ -1757,7 +1776,7 @@ details {
   border: 1px solid #eaeaea;
   margin-bottom: 47px;
 }
-#quotesСheck{
+#city{
   color: #222222;
   font-size: 16px;
   font-weight: 300;
@@ -1766,7 +1785,27 @@ details {
   height: 45px;
   border: 1px solid #eaeaea;
   margin-bottom: 47px;
+  position: absolute;
 }
+.city_none{
+  display: none;
+}
+
+#city_list{
+  position: relative;
+  padding-left: 10px;
+  margin-top: 55px;
+  height: 150px;
+  overflow: scroll;
+  border: 1px solid #eaeaea;
+}
+.display_none{
+  display: none;
+}
+#city_list li{
+  list-style-type: none;
+}
+
 .adress_label {
   color: #222222;
   font-size: 12px;
@@ -1783,7 +1822,7 @@ details {
 .checkout_left_button {
   display: flex;
   margin-right: 32px;
-  margin-top: 20px;
+  margin-top: 70px;
 }
 .button_checkout a {
   display: block;

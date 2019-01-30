@@ -1,36 +1,33 @@
-var $checkout = document.getElementById("checkout");
-$checkout.addEventListener("click", handleClickButtonChekout)
 
-function handleClickButtonChekout(){
-    var $quotesСheck = document.getElementById("quotesСheck").value;
-    var $quotesСheck = $quotesСheck.replace(/^'|(\s)'|'(\s)|'$/g, '$1"$2')
-    console.log($quotesСheck)
-    document.getElementById("quotesСheck").value = $quotesСheck;
+ (function($){
+    $("#city").on("click", function(event){
+      $.ajax({
+        url: "http://127.0.0.1:8080/city_1.json",
+        dataType: "json",
+        success: function(data){
+          $("#city_list").removeClass("display_none");
+        for (var i = 0; i < data.length; i++){
+            var $cityList = $("<li></li>").text(data[i].city_ru).addClass("city_list_li")
+
+            $("#city_list").append($cityList);
+            $cityList.on("click",  function(){
+                var $input = $(this).text();
+                $("#city").val($input);
+                $("#city_list").addClass("display_none").children().remove();
+            });
+            event.stopPropagation();
+           
+        } 
+        }
+       });
+     });
+   })(jQuery); 
     
-    var arrNameCheck = [document.getElementById("name"), document.getElementById("sername") ];
-    var regexp = /^[a-zA-Zа-яА-ЯёЁ]+$/;
-    for (var i = 0; i < arrNameCheck.length; i++){
-        if (regexp.test(arrNameCheck[i].value) == true){
-            arrNameCheck[i].style.border = "";  
-        }else{
-            arrNameCheck[i].style.border ="1px solid #f16d7f";
-        };
-    }
-    var $phoneChek = document.getElementById("phone").value;
-    regexp = /^\+\d{1}\(\d{3}\)\d{3}-\d{4}$/;
-    if (regexp.test($phoneChek) == true){
-        document.getElementById("phone").style.border = "";
-    }else{
-        document.getElementById("phone").style.border = "1px solid #f16d7f";
-    };
-
-    var $mail = document.getElementById("email_adress").value;
-     regexp = /^mymail\@mail\.ru$|^my-mail\@mail\.ru$|^my\.mail\@mail\.ru$/;
-     if (regexp.test($mail) == true){
-        document.getElementById("email_adress").style.border = "";
-    }else{
-        document.getElementById("email_adress").style.border = "1px solid #f16d7f";
-    };
-
-}
-
+  
+  (function($){
+    $(".checkout_buttonJQ").on("click", function(event){
+    $(this).next().toggleClass("checkout_buttonHide").removeClass("checkout_buttonHide");  
+    var $toggleClass = $(this).parents("div").find("div.checkout_form_1").not($(this).next());
+    $($toggleClass).eq($toggleClass.index()).toggleClass("checkout_buttonHide").addClass("checkout_buttonHide");
+  });
+  })(jQuery);
