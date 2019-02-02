@@ -34,10 +34,10 @@ body {
   display: flex;
   align-items: center;
 }
-/*.header-left:hover .logoe-img {
+.header-left:hover .logoe-img {
   transform: rotate(360deg);
   transition: all 0.7s ease-in-out;
-}*/
+}
 .logo-img {
   transition: margin 0.5s ease;
   transition: transform 0.7s;
@@ -1660,20 +1660,6 @@ details {
   text-transform: uppercase;
   margin-left: 15px;
 }
-.shiping_adress_text p {
-  color: #222222;
-  font-size: 16px;
-  font-weight: 300;
-  text-transform: uppercase;
-  margin-left: 15px;
-  height: auto;
-}
-.checkout_buttonJQ{
-  margin-bottom: 20px;
-  margin-top: 20px;
-  width: 70px;
-  height: 30px;
-}
 .form-label {
   color: #222222;
   font-size: 12px;
@@ -1684,13 +1670,8 @@ details {
 .checkout_form_1 {
   display: flex;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 90px;
   margin-bottom: 79px;
-}
-.checkout_buttonHide{
-  margin-bottom: 0px;
-  height: 0px;
-  overflow: hidden;
 }
 .checkout_form_1_right {
   width: 500px;
@@ -1727,8 +1708,8 @@ details {
   margin-left: 40px;
 }
 #shipping_checkout {
-  color: #222222;
-  font-size: 16px;
+  color: #b1b1b1;
+  font-size: 13px;
   font-weight: 300;
   padding-left: 18px;
   width: 372px;
@@ -1737,8 +1718,8 @@ details {
   margin-bottom: 47px;
 }
 #email_adress {
-  color: #222222;
-  font-size: 16px;
+  color: #b1b1b1;
+  font-size: 13px;
   font-weight: 300;
   padding-left: 18px;
   width: 372px;
@@ -1746,73 +1727,13 @@ details {
   border: 1px solid #eaeaea;
   margin-bottom: 47px;
 }
-#name{
-  color: #222222;
-  font-size: 16px;
-  font-weight: 300;
-  padding-left: 18px;
-  width: 372px;
-  height: 45px;
-  border: 1px solid #eaeaea;
-  margin-bottom: 47px;
-}
-#sername{
-  color: #222222;
-  font-size: 16px;
-  font-weight: 300;
-  padding-left: 18px;
-  width: 372px;
-  height: 45px;
-  border: 1px solid #eaeaea;
-  margin-bottom: 47px;
-}
-#phone{
-  color: #222222;
-  font-size: 16px;
-  font-weight: 300;
-  padding-left: 18px;
-  width: 372px;
-  height: 45px;
-  border: 1px solid #eaeaea;
-  margin-bottom: 47px;
-}
-#city{
-  color: #222222;
-  font-size: 16px;
-  font-weight: 300;
-  padding-left: 18px;
-  width: 372px;
-  height: 45px;
-  border: 1px solid #eaeaea;
-  margin-bottom: 47px;
-  position: absolute;
-}
-.city_none{
-  display: none;
-}
-
-#city_list{
-  position: relative;
-  padding-left: 10px;
-  margin-top: 55px;
-  height: 150px;
-  overflow: scroll;
-  border: 1px solid #eaeaea;
-}
-.display_none{
-  display: none;
-}
-#city_list li{
-  list-style-type: none;
-}
-
 .adress_label {
   color: #222222;
   font-size: 12px;
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
-  display: flex;  
+  display: flex;
 }
 .adress_label p {
   color: #f16d7f;
@@ -1822,7 +1743,6 @@ details {
 .checkout_left_button {
   display: flex;
   margin-right: 32px;
-  margin-top: 70px;
 }
 .button_checkout a {
   display: block;
