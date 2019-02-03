@@ -8,11 +8,16 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src = "utils.js"></script>
+    <script>
+      (function($){
+        var shopParam  = getShopParams();
+      })(jQuery);
+    </script>
   </head> 
    
     <body>
       <div class="content">
-        <div class="top">
+         <div class="top">
          <header class="header">
            <div class="container header-flex"> 
            <div class= "header-left">
@@ -53,12 +58,11 @@
             </form>
           </div>
           <div class= "header-right">
-                <div class= "drop_cart" id = "cart">
+                <div class= "drop_cart">
                  <a href="cart.html"><img class="anim-cart" src="https://student-geekbrains.000webhostapp.com/img/cart.svg" alt="cart" id="cart"></a>
                   
                   <div class="drop_down_cart">
-                     <div id = "empty_Cart">
-                       <div class= "item_in_cart">
+                      <div class= "item_in_cart">
                           <a href="Singl.html"><img src="img/Item_in_cart_1.jpg" alt="item_in_cart"></a>
                           <div class= "about_item">
                               <h3 class="name_item">Rebox Zane</h3>
@@ -70,22 +74,23 @@
                              <div class="delit_items">
                                   <a href="#"><img src="img/del.png" alt="del"></a>
                              </div>
-                       </div>
-                       <div class= "item_in_cart">
-                          <a href="Singl.html"><img src="https://student-geekbrains.000webhostapp.com/img/Item_in_cart_2.jpg" alt="item_in_cart"></a>
+                      </div>
+                      <div class= "item_in_cart">
+                          <a href="Singl.html"><img src="img/Item_in_cart_2.jpg" alt="item_in_cart"></a>
                           <div class= "about_item">
                               <h3 class="name_item">Rebox Zane</h3>
-                              <div class= "stars"><a href="#"><img src="https://student-geekbrains.000webhostapp.com/img/stars.jpg" alt="stars"></a></div>
-                              <div class="item_price_cart"></div>
+                              <div class= "stars"><a href="#"><img src="img/stars.jpg" alt="stars"></a></div>
+                              <div class="item_price_cart">
+                                  <img src="img/1__x___$250.png" alt="price">
+                              </div>
                           </div>
-                          <div class="delit_items">
-                              <a href="#"><img src="img/del.png" alt="del"></a>
-                          </div>
-                       </div>
-                    </div>
+                             <div class="delit_items">
+                                  <a href="#"><img src="img/del.png" alt="del"></a>
+                             </div>
+                      </div>
                       <div class= "total">
-                          <h3 class= "total_text" >total</h3>
-                          <div class="tatal_price" id = "total_price">500</div>
+                          <h3 class= "total_text">total</h3>
+                          <div class="tatal_price">$500</div>
                       </div>
                       <div class= "checkout">
                           <a href="Checkout.html">checkout</a>
@@ -98,8 +103,8 @@
             <a href="#" class= "button">My Account<img class="whtite" src="https://student-geekbrains.000webhostapp.com/img/hover_white.png" alt="arrow"></a> 
           </div>
            </div>
-         </header>
-         <nav class="navigation" id = "navigation">
+    </header>
+         <nav class="navigation">
             <div class= "container">
                <div class= "border-bottom_red">
                 <ul class= "menu_header_top">
@@ -108,7 +113,7 @@
                  
                </li>
                  <li class= "menu_list">
-                  <a class= "menu_link" href="http://localhost:3000/goods">Man</a>
+                  <a class= "menu_link" href="Products.html">Man</a>
                   <div class= "drop_box">
                    <div class= "drop_flex">
                       <h3 class= "drop_heading">Women</h3>
@@ -160,7 +165,7 @@
                </div>
                 </li>
                <li class= "menu_list">
-                  <a class= "menu_link" href="http://localhost:3000/goods?category=women">Women</a>
+                  <a class= "menu_link" href="#">Women</a>
                   <div class= "drop_box">
                    <div class= "drop_flex">
                       <h3 class= "drop_heading">Women</h3>
@@ -532,8 +537,70 @@
                </div>
            </div>
            <section class= "produkts_items_img" id = "goods">
-        
-        </section>
+        <div class= "featured_items_box">
+            <a class= "items_list" href="Singl.html"><img src="img/poduct_1.png" alt="featured_items"></a>
+            <h2 class="items_list_text">MANGO PEOPLE T-SHIRT</h2><p class="items_list_price">$52.00</p>
+            <div class= "add_tocard">
+                <a href="#">Add to card</a>
+            </div>
+        </div>
+        <div class= "featured_items_box">
+            <a class= "items_list" href="Singl.html"><img src="img/Products_2.jpg" alt="featured_items"></a>
+            <p class="items_list_text">MANGO PEOPLE T-SHIRT</p><p class="items_list_price">$52.00</p>
+            <div class= "add_tocard">
+              <a href="#">Add to card</a>
+            </div>
+        </div>
+        <div class= "featured_items_box">
+         <a class= "items_list" href="Singl.html"><img src="img/Product_3.jpg" alt="featured_items"></a>
+         <p class="items_list_text">MANGO PEOPLE T-SHIRT</p><p class="items_list_price">$52.00</p>
+          <div class= "add_tocard">
+              <a href="#">Add to card</a>
+          </div>
+        </div>
+        <div class= "featured_items_box">
+         <a class= "items_list" href="Singl.html"><img src="img/Product_4.jpg" alt="featured_items"></a>
+         <p class="items_list_text">MANGO PEOPLE T-SHIRT</p><p class="items_list_price">$52.00</p>
+          <div class= "add_tocard">
+              <a href="#">Add to card</a>
+          </div>
+        </div>
+        <div class= "featured_items_box">
+         <a class= "items_list" href="Singl.html"><img src="img/Product_5.jpg" alt="featured_items"></a>
+         <p class="items_list_text">MANGO PEOPLE T-SHIRT</p><p class="items_list_price">$52.00</p>
+          <div class= "add_tocard">
+              <a href="#">Add to card</a>
+          </div>
+        </div>
+        <div class= "featured_items_box">
+         <a class= "items_list" href="Singl.html"><img src="img/Product_6.jpg" alt="featured_items"></a>
+         <p class="items_list_text">MANGO PEOPLE T-SHIRT</p><p class="items_list_price">$52.00</p>
+          <div class= "add_tocard">
+              <a href="#">Add to card</a>
+          </div>
+        </div>
+        <div class= "featured_items_box">
+         <a class= "items_list" href="Singl.html"><img src="img/Product_7.jpg" alt="featured_items"></a>
+         <p class="items_list_text">MANGO PEOPLE T-SHIRT</p><p class="items_list_price">$52.00</p>
+          <div class= "add_tocard">
+              <a href="#">Add to card</a>
+          </div>
+        </div>
+        <div class= "featured_items_box">
+         <a class= "items_list" href="Singl.html"><img src="img/Product_8.jpg" alt="featured_items"></a>
+         <p class="items_list_text">MANGO PEOPLE T-SHIRT</p><p class="items_list_price">$52.00</p>
+          <div class= "add_tocard">
+              <a href="#">Add to card</a>
+          </div>
+        </div>
+        <div class= "featured_items_box">
+         <a class= "items_list" href="Singl.html"><img src="img/Products_9.jpg" alt="featured_items"></a>
+         <p class="items_list_text">MANGO PEOPLE T-SHIRT</p><p class="items_list_price">$52.00</p>
+          <div class= "add_tocard">
+              <a href="#">Add to card</a>
+          </div>
+        </div>
+       </section>
        </div>
         </div> 
          <div class="container">
@@ -574,32 +641,33 @@
      </div>
     </div>
          <div class= "subscibe_bckg">
-            <div class= "container subscibe">
-              <div class= "subcr_details">
-                <div class= "suscribe_left">
-                  <div class= "subscr_text_left"><img src="https://student-geekbrains.000webhostapp.com/img/Subsc_right_img.png" alt="subscr_img" id="subcr_left_img">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, 
-a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”
-                  </div>
-                  <div class= "red_sbcr">Bin Burhan</div>
-                  <div class= "subscr_text_left_down">Dhaka, Bd</div>
-                </div>
-                <div class= "subscribe_right">
-                   <div class="subscr_right_text_apper">Subscribe</div>
-                   <div class= "suscr_right_text_low">FOR OUR NEWLETTER AND PROMOTION
-                   </div>
-                   <form class = "subscr_form" action="#">
-                       <input type="email" placeholder=" Enter Your Email" id= "subscr">
-                       <button type ="submit" id= "subscr_button">Subscribe</button>
-                   </form>
-                </div>
-               </div>
-        </div>      
+        <div class= "container subscibe">
+         <div class= "subcr_details">
+           <div class= "suscribe_left">
+          <div class= "subscr_text_left"><img src="img/Subsc_right_img.png" alt="subscr_img" id="subcr_left_img">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, 
+a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”</div>
+          <div class= "red_sbcr">Bin Burhan</div>
+          <div class= "subscr_text_left_down">Dhaka, Bd</div>
+       </div>
+            <div class= "subscribe_right">
+         <div class="subscr_right_text_apper">Subscribe</div>
+         <div class= "suscr_right_text_low">
+ FOR OUR NEWLETTER AND PROMOTION
+      </div>
+      <form class = "subscr_form" action="#">
+               <input type="email" placeholder=" Enter Your Email" id= "subscr">
+               <button type ="submit" id= "subscr_button">Subscribe</button>
+            </form>
+       </div>
          </div>
+       
+   </div>      
+      </div>
          </div>
         <footer>
              <div class= "container footer_up">
                  <div class= "Footer_logo_text">
-                    <a class = "logo" href="index.html"><img class= "logo-img" src="https://student-geekbrains.000webhostapp.com/img/Logo.png" alt="logo">BRAN<span class= "logo_d">D</span></a> 
+                    <a class = "logo" href="index.html"><img class= "logo-img" src="img/Logo.png" alt="logo">BRAN<span class= "logo_d">D</span></a> 
                     <p>Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and cross-unit <br>
                     Efficiently plagiarize 24/365 action items and focused infomediaries.
                     Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.</p>
@@ -643,9 +711,9 @@ a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”
                
                <div class= "social_links">
                    <div class="facebook"><a href="#">f</a></div>
-                   <div class="twit"><a href="#"><img src="https://student-geekbrains.000webhostapp.com/img/Twiter.png" alt="twit"></a></div>
+                   <div class="twit"><a href="#"><img src="img/Twiter.png" alt="twit"></a></div>
                    <div class="in"><a href="#">in</a></div>
-                   <div class="pin"><a href="#"><img class = "pin_a_img"src="https://student-geekbrains.000webhostapp.com/img/pinterest.svg" alt="pint"></a></div>
+                   <div class="pin"><a href="#"><img class = "pin_a_img"src="img/pinterest.svg" alt="pint"></a></div>
                    <div class="g"><a href="#">G+</a></div>
                    </div>
                </div>
@@ -653,6 +721,6 @@ a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”
              
          </footer>
        </div>
-       <script src = "Cart_drop.js"></script>     
+        
     </body>
 </html>    
